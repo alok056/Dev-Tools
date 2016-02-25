@@ -22,7 +22,7 @@ alias stes="sudo service elasticsearch status"
 alias stmysql="sudo service mysql status"
 alias stphp5-fpm="sudo service php5-fpm status"
 alias stnginx="sudo service nginx status"
-alias sresttall="sudo service dynamodb-local restart;sudo service elasticsearch restart;sudo service php5-fpm restart;sudo service nginx restart;sudo service mysql restart"
+alias reall="sudo service dynamodb-local restart;sudo service elasticsearch restart;sudo service php5-fpm restart;sudo service nginx restart;sudo service mysql restart"
 
 alias ses="sudo service elasticsearch start"
 alias smysql="sudo service mysql start"
