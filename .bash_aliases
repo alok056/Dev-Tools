@@ -5,7 +5,7 @@ alias cc="sudo rm -rf app/cache/*"
 alias ccp="sudo app/console cache:clear --env=prod"
 alias ccl="sudo app/console cache:clear"
 alias gr="grunt requirejs"
-alias grad="grunt requirejs;./app/console assetic:dump;./app/console assets:install"
+alias grad="sudo grunt requirejs;sudo ./app/console assetic:dump;sudo ./app/console assets:install"
 
 # Logs
 
