@@ -1,18 +1,20 @@
 #
 alias ccgl="sudo rm -rf app/cache/*; grunt precompile; sudo rm -rf app/cache/*;sudo app/console cache:clear; sudo app/console assets:install; sudo app/console assetic:dump;"
-alias ccgp="sudo rm -rf app/cache/*; grunt precompile; sudo rm -rf app/cache/*;sudo app/console cache:clear --env=prod; sudo app/console assets:install;sudo app/console assetic:dump;"
+alias ccgp="sudo rm -rf app/cache/*; grunt precompile --env=prod; sudo rm -rf app/cache/*;sudo app/console cache:clear --env=prod; sudo app/console assets:install --env=prod;sudo app/console assetic:dump --env=prod;"
 alias cc="sudo rm -rf app/cache/*"
 alias ccp="sudo app/console cache:clear --env=prod"
 alias ccl="sudo app/console cache:clear"
 alias gr="grunt requirejs"
-alias grad="grunt requirejs;./app/console assetic:dump;./app/console assets:install"
+alias gradl="sudo grunt requirejs;sudo ./app/console assetic:dump;./app/console assets:install"
+alias gradp="sudo grunt requirejs;sudo ./app/console assetic:dump --env=prod;./app/console assets:install --env=prod"
 
 # Logs
 
-alias log="sudo tail -f /var/log/nginx/www.error.log"
+alias elog="sudo tail -f /var/log/nginx/www.error.log"
+alias logs="sudo tail -f /var/log/nginx/*.error.log"
 alias raylog="sudo tail -f /var/log/nginx/ray.error.log"
 alias acclog="sudo tail -f /var/log/practo-account.log"
-alias whomi="echo 'staging-info"
+alias prodlog="sudo tail -f app/logs/prod.log"
 
 # Services
 
