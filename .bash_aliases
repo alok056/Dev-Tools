@@ -5,7 +5,7 @@ alias cc="sudo rm -rf app/cache/*"
 alias ccp="sudo app/console cache:clear --env=prod"
 alias ccl="sudo app/console cache:clear"
 alias gr="grunt requirejs"
-alias gradl="sudo grunt requirejs;sudo ./app/console assetic:dump;./app/console assets:install"
+alias gradl="sudo grunt requirejs;sudo ./app/console assetic:dump;sudo ./app/console assets:install"
 alias gradp="sudo grunt requirejs;sudo ./app/console assetic:dump --env=prod;./app/console assets:install --env=prod"
 
 # Logs
@@ -24,6 +24,7 @@ alias stes="sudo service elasticsearch status"
 alias stmysql="sudo service mysql status"
 alias stphp5-fpm="sudo service php5-fpm status"
 alias stnginx="sudo service nginx status"
+alias reall="sudo service dynamodb-local restart;sudo service elasticsearch restart;sudo service php5-fpm restart;sudo service nginx restart;sudo service mysql restart"
 
 alias ses="sudo service elasticsearch start"
 alias smysql="sudo service mysql start"
