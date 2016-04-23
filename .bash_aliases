@@ -1,3 +1,8 @@
+#git branch in prompt
+    parse_git_branch() {
+        git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+    }
+    export PS1="\[\033[32m\] Alok\$(parse_git_branch)\[\033[00m\] \W $ "
 #
 alias ccgl="sudo rm -rf app/cache/*; grunt precompile; sudo rm -rf app/cache/*;sudo app/console cache:clear; sudo app/console assets:install; sudo app/console assetic:dump;"
 alias ccgp="sudo rm -rf app/cache/*; grunt precompile --env=prod; sudo rm -rf app/cache/*;sudo app/console cache:clear --env=prod; sudo app/console assets:install --env=prod;sudo app/console assetic:dump --env=prod;"
